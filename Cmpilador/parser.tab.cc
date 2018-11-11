@@ -49,7 +49,7 @@
 
 #line 51 "parser.tab.cc" // lalr1.cc:412
 // Unqualified %code blocks.
-#line 26 "parser.yy" // lalr1.cc:413
+#line 31 "parser.yy" // lalr1.cc:413
 
 #include "driver.h"
 #include <iostream>
@@ -333,49 +333,49 @@ namespace yy {
     {
             case 3: // numero
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 339 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 18: // id
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< std::string > (); }
 #line 346 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 25: // INST_T
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 353 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 26: // INST_MOVER
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 360 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 27: // VAR_C
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 367 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 28: // EXP
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 374 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 29: // VAR
 
-#line 69 "parser.yy" // lalr1.cc:636
+#line 74 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
 #line 381 "parser.tab.cc" // lalr1.cc:636
         break;
@@ -608,43 +608,73 @@ namespace yy {
           switch (yyn)
             {
   case 5:
-#line 78 "parser.yy" // lalr1.cc:859
+#line 83 "parser.yy" // lalr1.cc:859
     {posicion(yystack_[3].value.as< float > (),yystack_[1].value.as< float > ());}
 #line 614 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 9:
-#line 84 "parser.yy" // lalr1.cc:859
-    {arriba(yystack_[1].value.as< float > ());}
+  case 8:
+#line 88 "parser.yy" // lalr1.cc:859
+    {abajo(yystack_[1].value.as< float > ());}
 #line 620 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 11:
-#line 86 "parser.yy" // lalr1.cc:859
-    {derecha(yystack_[1].value.as< float > ());}
+  case 9:
+#line 89 "parser.yy" // lalr1.cc:859
+    {arriba(yystack_[1].value.as< float > ());}
 #line 626 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 12:
-#line 89 "parser.yy" // lalr1.cc:859
-    {dibujorojo();}
+  case 10:
+#line 90 "parser.yy" // lalr1.cc:859
+    {izquierda(yystack_[1].value.as< float > ());}
 #line 632 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 13:
-#line 90 "parser.yy" // lalr1.cc:859
-    {dibujoverde();}
+  case 11:
+#line 91 "parser.yy" // lalr1.cc:859
+    {derecha(yystack_[1].value.as< float > ());}
 #line 638 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 20:
-#line 101 "parser.yy" // lalr1.cc:859
-    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
+  case 12:
+#line 94 "parser.yy" // lalr1.cc:859
+    {dibujorojo();}
 #line 644 "parser.tab.cc" // lalr1.cc:859
     break;
 
+  case 13:
+#line 95 "parser.yy" // lalr1.cc:859
+    {dibujoverde();}
+#line 650 "parser.tab.cc" // lalr1.cc:859
+    break;
 
-#line 648 "parser.tab.cc" // lalr1.cc:859
+  case 14:
+#line 96 "parser.yy" // lalr1.cc:859
+    {dibujoazul();}
+#line 656 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 15:
+#line 97 "parser.yy" // lalr1.cc:859
+    {dibujoamarillo();}
+#line 662 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 16:
+#line 98 "parser.yy" // lalr1.cc:859
+    {dibujoblanco();}
+#line 668 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 20:
+#line 106 "parser.yy" // lalr1.cc:859
+    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
+#line 674 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+
+#line 678 "parser.tab.cc" // lalr1.cc:859
             default:
               break;
             }
@@ -1000,9 +1030,9 @@ namespace yy {
   const unsigned char
   calculadora_parser::yyrline_[] =
   {
-       0,    74,    74,    76,    77,    78,    79,    80,    83,    84,
-      85,    86,    89,    90,    91,    92,    93,    94,    97,    98,
-     101,   102
+       0,    79,    79,    81,    82,    83,    84,    85,    88,    89,
+      90,    91,    94,    95,    96,    97,    98,    99,   102,   103,
+     106,   107
   };
 
   // Print the state stack on the debug stream.
@@ -1037,30 +1067,53 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:1167
 } // yy
-#line 1041 "parser.tab.cc" // lalr1.cc:1167
-#line 105 "parser.yy" // lalr1.cc:1168
+#line 1071 "parser.tab.cc" // lalr1.cc:1167
+#line 110 "parser.yy" // lalr1.cc:1168
 
 void dibujorojo(){
 	miniwin::color(miniwin::ROJO);
-	miniwin::linea(0,0,100,100);
-   	miniwin::refresca();
-
+  miniwin::refresca();
 }
 void dibujoverde(){
 	miniwin::color(miniwin::VERDE);
-	miniwin::linea(100,100,200,200);
-   	miniwin::refresca();
-
+  miniwin::refresca();
+}
+void dibujoazul(){
+	miniwin::color(miniwin::AZUL);
+  miniwin::refresca();
+}
+void dibujoamarillo(){
+	miniwin::color(miniwin::AMARILLO);
+  miniwin::refresca();
+}
+void dibujoblanco(){
+	miniwin::color(miniwin::BLANCO);
+  miniwin::refresca();
 }
 void arriba(float dir){
+  dir=dir*30;
 	miniwin::linea(posx,posy,posx,posy-dir);
 	miniwin::refresca();
 	posy=posy-dir;
 }
 void derecha(float dir){
+  dir=dir*30;
   miniwin::linea(posx,posy,posx+dir,posy);
   miniwin::refresca();
   posx=posx+dir;
+}
+void izquierda(float dir){
+  dir=dir*30;
+  miniwin::linea(posx,posy,posx-dir,posy);
+  miniwin::refresca();
+  posx=posx-dir;  
+}
+void abajo(float dir){
+  dir=dir*30;
+  miniwin::linea(posx,posy,posx,posy+dir);
+  miniwin::refresca();
+  posy=posy+dir;
+    
 }
 void posicion(float x,float y){
   posx=x;

@@ -14,9 +14,14 @@
 class calculadora_driver;
 void dibujorojo();
 void dibujoverde();
+void dibujoamarillo();
+void dibujoazul();
+void dibujoblanco();
 void posicion(float x,float y);
 void arriba(float dir);
 void derecha(float dir);
+void abajo(float dir);
+void izquierda(float dir);
 }
 %param { calculadora_driver& driver }
 %locations
@@ -80,17 +85,17 @@ INST_T : INST_T INST_T
         | davalor EXP
         ;
 
-INST_MOVER: aba parabier VAR paracer
+INST_MOVER: aba parabier VAR paracer  {abajo($3);}
         | arr parabier VAR paracer {arriba($3);}
-        | izq parabier VAR paracer
+        | izq parabier VAR paracer  {izquierda($3);}
         | der parabier VAR paracer  {derecha($3);}
         ;
 
 VAR_C : rojo {dibujorojo();}
         | verde {dibujoverde();}
-        | azul 
-        | amarillo
-        | blanco
+        | azul {dibujoazul();}
+        | amarillo  {dibujoamarillo();}
+        | blanco  {dibujoblanco();}
         | id
         ;
 
@@ -105,25 +110,48 @@ VAR : numero {$$=$1;}
 %%
 void dibujorojo(){
 	miniwin::color(miniwin::ROJO);
-	miniwin::linea(0,0,100,100);
-   	miniwin::refresca();
-
+  miniwin::refresca();
 }
 void dibujoverde(){
 	miniwin::color(miniwin::VERDE);
-	miniwin::linea(100,100,200,200);
-   	miniwin::refresca();
-
+  miniwin::refresca();
+}
+void dibujoazul(){
+	miniwin::color(miniwin::AZUL);
+  miniwin::refresca();
+}
+void dibujoamarillo(){
+	miniwin::color(miniwin::AMARILLO);
+  miniwin::refresca();
+}
+void dibujoblanco(){
+	miniwin::color(miniwin::BLANCO);
+  miniwin::refresca();
 }
 void arriba(float dir){
+  dir=dir*30;
 	miniwin::linea(posx,posy,posx,posy-dir);
 	miniwin::refresca();
 	posy=posy-dir;
 }
 void derecha(float dir){
+  dir=dir*30;
   miniwin::linea(posx,posy,posx+dir,posy);
   miniwin::refresca();
   posx=posx+dir;
+}
+void izquierda(float dir){
+  dir=dir*30;
+  miniwin::linea(posx,posy,posx-dir,posy);
+  miniwin::refresca();
+  posx=posx-dir;  
+}
+void abajo(float dir){
+  dir=dir*30;
+  miniwin::linea(posx,posy,posx,posy+dir);
+  miniwin::refresca();
+  posy=posy+dir;
+    
 }
 void posicion(float x,float y){
   posx=x;
