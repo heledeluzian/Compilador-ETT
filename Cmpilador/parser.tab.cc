@@ -254,7 +254,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -282,7 +282,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -350,7 +350,7 @@ namespace yy {
 #line 351 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 26: // DIR
+      case 26: // INST_MOVER
 
 #line 64 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
@@ -577,7 +577,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -880,60 +880,65 @@ namespace yy {
   const signed char
   calculadora_parser::yypact_[] =
   {
-       3,     2,    13,   -15,   -15,   -15,   -15,    -6,     9,    10,
-      -5,    22,   -15,    19,   -15,    21,    15,   -15,     2,    15,
-      12,   -15,   -15,   -15,   -15,   -15,   -15,    29,   -15,   -15,
-      23,    30,   -15,   -15,   -15,   -15,    15,   -15,    31,   -15
+       1,     6,     4,     7,     9,    10,    16,    -2,    20,    34,
+       2,   -15,   -15,     0,     0,     0,     0,    17,   -15,    25,
+       0,   -15,     6,   -15,   -15,    35,    36,    37,    38,    19,
+     -15,   -15,   -15,   -15,   -15,   -15,    39,    31,   -15,   -15,
+     -15,   -15,   -15,   -15,   -15,     0,    41,   -15
   };
 
   const unsigned char
   calculadora_parser::yydefact_[] =
   {
-       0,     0,     0,     8,     9,    10,    11,     0,     0,     0,
-       0,     0,     1,     0,     7,     0,     0,     2,     3,     0,
-       0,    12,    13,    15,    14,    16,    17,     0,    20,    21,
-       0,     0,    17,    18,    19,     6,     0,     4,     0,     5
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       0,     4,     1,     0,     0,     0,     0,     0,     7,     0,
+       0,     2,     3,    20,    21,     0,     0,     0,     0,     0,
+      12,    13,    15,    14,    16,    17,     0,     0,     8,     9,
+      10,    11,    19,    18,     6,     0,     0,     5
   };
 
   const signed char
   calculadora_parser::yypgoto_[] =
   {
-     -15,   -15,    43,   -15,    25,   -15,   -14
+     -15,   -15,    44,   -15,    24,   -15,   -14
   };
 
   const signed char
   calculadora_parser::yydefgoto_[] =
   {
-      -1,     2,    18,    11,    27,    14,    30
+      -1,     2,    22,    11,    36,    18,    25
   };
 
   const unsigned char
   calculadora_parser::yytable_[] =
   {
-      17,     3,     4,     5,     6,    31,    34,     1,     3,     4,
-       5,     6,    13,    12,     7,    28,     8,     9,    28,    15,
-      16,     7,    38,     8,     9,    21,    22,    23,    24,    25,
-      32,    20,    19,    29,    21,    22,    23,    24,    25,    26,
-      35,    37,    39,    36,    10,    33
+      26,    27,    28,    23,    12,     1,    37,    21,     3,     4,
+       5,     6,     3,     4,     5,     6,    17,    13,    24,    14,
+      15,     7,    42,     8,     9,     7,    16,     8,     9,    29,
+      19,    46,    30,    31,    32,    33,    34,    35,    30,    31,
+      32,    33,    34,    35,    20,    10,    38,    39,    40,    41,
+      44,    45,    47,    43
   };
 
   const unsigned char
   calculadora_parser::yycheck_[] =
   {
-       5,     6,     7,     8,     9,    19,    20,     4,     6,     7,
-       8,     9,    18,     0,    19,     3,    21,    22,     3,    10,
-      10,    19,    36,    21,    22,    13,    14,    15,    16,    17,
-      18,    12,    10,    18,    13,    14,    15,    16,    17,    18,
-      11,    11,    11,    20,     1,    20
+      14,    15,    16,     3,     0,     4,    20,     5,     6,     7,
+       8,     9,     6,     7,     8,     9,    18,    10,    18,    10,
+      10,    19,     3,    21,    22,    19,    10,    21,    22,    12,
+      10,    45,    13,    14,    15,    16,    17,    18,    13,    14,
+      15,    16,    17,    18,    10,     1,    11,    11,    11,    11,
+      11,    20,    11,    29
   };
 
   const unsigned char
   calculadora_parser::yystos_[] =
   {
        0,     4,    24,     6,     7,     8,     9,    19,    21,    22,
-      25,    26,     0,    18,    28,    10,    10,     5,    25,    10,
-      12,    13,    14,    15,    16,    17,    18,    27,     3,    18,
-      29,    29,    18,    27,    29,    11,    20,    11,    29,    11
+      25,    26,     0,    10,    10,    10,    10,    18,    28,    10,
+      10,     5,    25,     3,    18,    29,    29,    29,    29,    12,
+      13,    14,    15,    16,    17,    18,    27,    29,    11,    11,
+      11,    11,     3,    27,    11,    20,    29,    11
   };
 
   const unsigned char
@@ -947,8 +952,8 @@ namespace yy {
   const unsigned char
   calculadora_parser::yyr2_[] =
   {
-       0,     2,     3,     2,     4,     6,     4,     2,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     3,     3,
+       0,     2,     3,     2,     1,     6,     4,     2,     4,     4,
+       4,     4,     1,     1,     1,     1,     1,     1,     3,     3,
        1,     1
   };
 
@@ -962,7 +967,7 @@ namespace yy {
   "\"eof\"", "error", "$undefined", "numero", "editar", "termino", "aba",
   "arr", "izq", "der", "parabier", "paracer", "igual", "rojo", "verde",
   "amarillo", "azul", "blanco", "id", "davalor", "coma", "color", "pos",
-  "$accept", "INST", "INST_T", "DIR", "VAR_C", "EXP", "VAR", YY_NULLPTR
+  "$accept", "INST", "INST_T", "INST_MOVER", "VAR_C", "EXP", "VAR", YY_NULLPTR
   };
 
 #if YYDEBUG
@@ -1006,7 +1011,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:1167
 } // yy
-#line 1010 "parser.tab.cc" // lalr1.cc:1167
+#line 1015 "parser.tab.cc" // lalr1.cc:1167
 #line 100 "parser.yy" // lalr1.cc:1168
 
 void dibujorojo(){

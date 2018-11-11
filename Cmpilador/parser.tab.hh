@@ -295,7 +295,7 @@ namespace yy {
     {
       // numero
       // INST_T
-      // DIR
+      // INST_MOVER
       // VAR_C
       // EXP
       // VAR
@@ -743,7 +743,7 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 45,     ///< Last index in yytable_.
+      yylast_ = 53,     ///< Last index in yytable_.
       yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
@@ -829,7 +829,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -859,7 +859,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -927,7 +927,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR
@@ -963,7 +963,7 @@ namespace yy {
     {
       case 3: // numero
       case 25: // INST_T
-      case 26: // DIR
+      case 26: // INST_MOVER
       case 27: // VAR_C
       case 28: // EXP
       case 29: // VAR

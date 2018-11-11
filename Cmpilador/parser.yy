@@ -56,10 +56,10 @@ void dibujoverde();
 
 //Listado de No Terminales
 %type <float> INST_T
-%type <float> DIR
 %type <float> VAR_C
 %type <float> EXP
 %type <float> VAR
+%type <float> INST_MOVER
 
 %printer { yyoutput << $$; } <*>;
 %%
@@ -69,28 +69,28 @@ void dibujoverde();
 INST : editar INST_T termino
 
 INST_T : INST_T INST_T
-        | DIR parabier VAR paracer
+        | INST_MOVER
         | pos parabier VAR coma VAR paracer
         | color parabier VAR_C paracer
         | davalor EXP
         ;
 
-DIR : aba
-      | arr
-      | izq
-      | der
-      ;
+INST_MOVER: aba parabier VAR paracer
+        | arr parabier VAR paracer
+        | izq parabier VAR paracer
+        | der parabier VAR paracer
+        ;
 
 VAR_C : rojo {dibujorojo();}
         | verde {dibujoverde();}
-        | azul
+        | azul 
         | amarillo
         | blanco
         | id
         ;
 
 EXP : id igual VAR_C
-      | id igual VAR
+      | id igual numero
       ;
 
 VAR : numero
