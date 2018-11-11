@@ -48,8 +48,11 @@
 class calculadora_driver;
 void dibujorojo();
 void dibujoverde();
+void posicion(float x,float y);
+void arriba(float dir);
+void derecha(float dir);
 
-#line 53 "parser.tab.hh" // lalr1.cc:377
+#line 56 "parser.tab.hh" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -126,7 +129,7 @@ void dibujoverde();
 
 #line 6 "parser.yy" // lalr1.cc:377
 namespace yy {
-#line 130 "parser.tab.hh" // lalr1.cc:377
+#line 133 "parser.tab.hh" // lalr1.cc:377
 
 
 
@@ -1165,7 +1168,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:377
 } // yy
-#line 1169 "parser.tab.hh" // lalr1.cc:377
+#line 1172 "parser.tab.hh" // lalr1.cc:377
 
 
 

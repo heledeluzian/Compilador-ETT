@@ -14,6 +14,9 @@
 class calculadora_driver;
 void dibujorojo();
 void dibujoverde();
+void posicion(float x,float y);
+void arriba(float dir);
+void derecha(float dir);
 }
 %param { calculadora_driver& driver }
 %locations
@@ -23,6 +26,8 @@ void dibujoverde();
 {
 #include "driver.h"
 #include <iostream>
+
+int posx,posy;
 }
 %define api.token.prefix {TOK_}
 
@@ -70,15 +75,15 @@ INST : editar INST_T termino
 
 INST_T : INST_T INST_T
         | INST_MOVER
-        | pos parabier VAR coma VAR paracer
+        | pos parabier VAR coma VAR paracer {posicion($3,$5);}
         | color parabier VAR_C paracer
         | davalor EXP
         ;
 
 INST_MOVER: aba parabier VAR paracer
-        | arr parabier VAR paracer
+        | arr parabier VAR paracer {arriba($3);}
         | izq parabier VAR paracer
-        | der parabier VAR paracer
+        | der parabier VAR paracer  {derecha($3);}
         ;
 
 VAR_C : rojo {dibujorojo();}
@@ -90,11 +95,11 @@ VAR_C : rojo {dibujorojo();}
         ;
 
 EXP : id igual VAR_C
-      | id igual numero
+      | id igual numero 
       ;
 
-VAR : numero
-      | id
+VAR : numero {$$=$1;}
+      | id   
       ;
 
 %%
@@ -109,6 +114,20 @@ void dibujoverde(){
 	miniwin::linea(100,100,200,200);
    	miniwin::refresca();
 
+}
+void arriba(float dir){
+	miniwin::linea(posx,posy,posx,posy-dir);
+	miniwin::refresca();
+	posy=posy-dir;
+}
+void derecha(float dir){
+  miniwin::linea(posx,posy,posx+dir,posy);
+  miniwin::refresca();
+  posx=posx+dir;
+}
+void posicion(float x,float y){
+  posx=x;
+  posy=y;
 }
 void yy::calculadora_parser::error(const location_type& lugar, const std::string& lexema)
 {
