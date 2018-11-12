@@ -44,6 +44,8 @@
 
 #include <string>
 #include <stdio.h>
+#include <utility> 
+#include <vector>
 #include "miniwin.h"
 class calculadora_driver;
 void dibujorojo();
@@ -56,8 +58,10 @@ void arriba(float dir);
 void derecha(float dir);
 void abajo(float dir);
 void izquierda(float dir);
+void guardarnum(std::string h,float k);
+float buscarnum(std::string h);
 
-#line 61 "parser.tab.hh" // lalr1.cc:377
+#line 65 "parser.tab.hh" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -134,7 +138,7 @@ void izquierda(float dir);
 
 #line 6 "parser.yy" // lalr1.cc:377
 namespace yy {
-#line 138 "parser.tab.hh" // lalr1.cc:377
+#line 142 "parser.tab.hh" // lalr1.cc:377
 
 
 
@@ -1173,7 +1177,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:377
 } // yy
-#line 1177 "parser.tab.hh" // lalr1.cc:377
+#line 1181 "parser.tab.hh" // lalr1.cc:377
 
 
 

@@ -10,6 +10,8 @@
 {
 #include <string>
 #include <stdio.h>
+#include <utility> 
+#include <vector>
 #include "miniwin.h"
 class calculadora_driver;
 void dibujorojo();
@@ -22,6 +24,8 @@ void arriba(float dir);
 void derecha(float dir);
 void abajo(float dir);
 void izquierda(float dir);
+void guardarnum(std::string h,float k);
+float buscarnum(std::string h);
 }
 %param { calculadora_driver& driver }
 %locations
@@ -33,6 +37,7 @@ void izquierda(float dir);
 #include <iostream>
 
 int posx,posy;
+std::vector<std::pair<std::string, float> > v;
 }
 %define api.token.prefix {TOK_}
 
@@ -99,15 +104,31 @@ VAR_C : rojo {dibujorojo();}
         | id
         ;
 
-EXP : id igual VAR_C
-      | id igual numero 
+EXP : id igual VAR_C       
+      | id igual numero  {guardarnum($1,$3);}  
       ;
 
 VAR : numero {$$=$1;}
-      | id   
+      | id    {$$=buscarnum($1);}
       ;
 
 %%
+void guardarnum(std::string h,float k){
+	std::pair<std::string,float> j;
+	j.first=h;
+	j.second=k;
+	v.push_back(j);
+}
+float buscarnum(std::string h){
+	int l=v.size();
+	for(int i=0;i<l;i++){
+		if(v[i].first == h){
+			return v[i].second;
+		}
+	
+	}
+	return -1;
+}
 void dibujorojo(){
 	miniwin::color(miniwin::ROJO);
   miniwin::refresca();
