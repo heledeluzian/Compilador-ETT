@@ -49,15 +49,16 @@
 
 #line 51 "parser.tab.cc" // lalr1.cc:412
 // Unqualified %code blocks.
-#line 35 "parser.yy" // lalr1.cc:413
+#line 37 "parser.yy" // lalr1.cc:413
 
 #include "driver.h"
 #include <iostream>
 
 int posx,posy;
 std::vector<std::pair<std::string, float> > v;
+std::vector<std::pair<std::string, std::string> > cl;
 
-#line 61 "parser.tab.cc" // lalr1.cc:413
+#line 62 "parser.tab.cc" // lalr1.cc:413
 
 
 #ifndef YY_
@@ -143,7 +144,7 @@ std::vector<std::pair<std::string, float> > v;
 
 #line 6 "parser.yy" // lalr1.cc:479
 namespace yy {
-#line 147 "parser.tab.cc" // lalr1.cc:479
+#line 148 "parser.tab.cc" // lalr1.cc:479
 
   /* Return YYSTR after stripping away unnecessary quotes and
      backslashes, so that it's suitable for yyerror.  The heuristic is
@@ -334,51 +335,51 @@ namespace yy {
     {
             case 3: // numero
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 340 "parser.tab.cc" // lalr1.cc:636
+#line 341 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 18: // id
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< std::string > (); }
-#line 347 "parser.tab.cc" // lalr1.cc:636
+#line 348 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 25: // INST_T
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 354 "parser.tab.cc" // lalr1.cc:636
+#line 355 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 26: // INST_MOVER
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 361 "parser.tab.cc" // lalr1.cc:636
+#line 362 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 27: // VAR_C
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 368 "parser.tab.cc" // lalr1.cc:636
+#line 369 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 28: // EXP
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 375 "parser.tab.cc" // lalr1.cc:636
+#line 376 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 29: // VAR
 
-#line 79 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 382 "parser.tab.cc" // lalr1.cc:636
+#line 383 "parser.tab.cc" // lalr1.cc:636
         break;
 
 
@@ -609,85 +610,121 @@ namespace yy {
           switch (yyn)
             {
   case 5:
-#line 88 "parser.yy" // lalr1.cc:859
+#line 91 "parser.yy" // lalr1.cc:859
     {posicion(yystack_[3].value.as< float > (),yystack_[1].value.as< float > ());}
-#line 615 "parser.tab.cc" // lalr1.cc:859
+#line 616 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 8:
-#line 93 "parser.yy" // lalr1.cc:859
+#line 96 "parser.yy" // lalr1.cc:859
     {abajo(yystack_[1].value.as< float > ());}
-#line 621 "parser.tab.cc" // lalr1.cc:859
+#line 622 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 9:
-#line 94 "parser.yy" // lalr1.cc:859
+#line 97 "parser.yy" // lalr1.cc:859
     {arriba(yystack_[1].value.as< float > ());}
-#line 627 "parser.tab.cc" // lalr1.cc:859
+#line 628 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 10:
-#line 95 "parser.yy" // lalr1.cc:859
+#line 98 "parser.yy" // lalr1.cc:859
     {izquierda(yystack_[1].value.as< float > ());}
-#line 633 "parser.tab.cc" // lalr1.cc:859
+#line 634 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 11:
-#line 96 "parser.yy" // lalr1.cc:859
+#line 99 "parser.yy" // lalr1.cc:859
     {derecha(yystack_[1].value.as< float > ());}
-#line 639 "parser.tab.cc" // lalr1.cc:859
+#line 640 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 12:
-#line 99 "parser.yy" // lalr1.cc:859
+#line 102 "parser.yy" // lalr1.cc:859
     {dibujorojo();}
-#line 645 "parser.tab.cc" // lalr1.cc:859
+#line 646 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 13:
-#line 100 "parser.yy" // lalr1.cc:859
+#line 103 "parser.yy" // lalr1.cc:859
     {dibujoverde();}
-#line 651 "parser.tab.cc" // lalr1.cc:859
+#line 652 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 14:
-#line 101 "parser.yy" // lalr1.cc:859
+#line 104 "parser.yy" // lalr1.cc:859
     {dibujoazul();}
-#line 657 "parser.tab.cc" // lalr1.cc:859
+#line 658 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 15:
-#line 102 "parser.yy" // lalr1.cc:859
+#line 105 "parser.yy" // lalr1.cc:859
     {dibujoamarillo();}
-#line 663 "parser.tab.cc" // lalr1.cc:859
+#line 664 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 16:
-#line 103 "parser.yy" // lalr1.cc:859
+#line 106 "parser.yy" // lalr1.cc:859
     {dibujoblanco();}
-#line 669 "parser.tab.cc" // lalr1.cc:859
+#line 670 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 17:
+#line 107 "parser.yy" // lalr1.cc:859
+    {buscarcolor(yystack_[0].value.as< std::string > ());}
+#line 676 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 18:
+#line 110 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"ROJO");}
+#line 682 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 19:
-#line 108 "parser.yy" // lalr1.cc:859
-    {guardarnum(yystack_[2].value.as< std::string > (),yystack_[0].value.as< float > ());}
-#line 675 "parser.tab.cc" // lalr1.cc:859
+#line 111 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"VERDE");}
+#line 688 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 20:
-#line 111 "parser.yy" // lalr1.cc:859
-    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
-#line 681 "parser.tab.cc" // lalr1.cc:859
+#line 112 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"AZUL");}
+#line 694 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 21:
-#line 112 "parser.yy" // lalr1.cc:859
+#line 113 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"AMARILLO");}
+#line 700 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 22:
+#line 114 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"BLANCO");}
+#line 706 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 23:
+#line 115 "parser.yy" // lalr1.cc:859
+    {guardarnum(yystack_[2].value.as< std::string > (),yystack_[0].value.as< float > ());}
+#line 712 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 24:
+#line 118 "parser.yy" // lalr1.cc:859
+    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
+#line 718 "parser.tab.cc" // lalr1.cc:859
+    break;
+
+  case 25:
+#line 119 "parser.yy" // lalr1.cc:859
     {yylhs.value.as< float > ()=buscarnum(yystack_[0].value.as< std::string > ());}
-#line 687 "parser.tab.cc" // lalr1.cc:859
+#line 724 "parser.tab.cc" // lalr1.cc:859
     break;
 
 
-#line 691 "parser.tab.cc" // lalr1.cc:859
+#line 728 "parser.tab.cc" // lalr1.cc:859
             default:
               break;
             }
@@ -949,11 +986,12 @@ namespace yy {
   const signed char
   calculadora_parser::yypact_[] =
   {
-       1,     6,     4,     7,     9,    10,    16,    -2,    20,    34,
-       2,   -15,   -15,     0,     0,     0,     0,    17,   -15,    25,
-       0,   -15,     6,   -15,   -15,    35,    36,    37,    38,    19,
-     -15,   -15,   -15,   -15,   -15,   -15,    39,    31,   -15,   -15,
-     -15,   -15,   -15,   -15,   -15,     0,    41,   -15
+       1,     6,     4,     7,    10,    12,    24,    -2,    32,    33,
+       2,   -15,   -15,     0,     0,     0,     0,    14,   -15,    23,
+       0,   -15,     6,   -15,   -15,    34,    35,    36,    37,    16,
+     -15,   -15,   -15,   -15,   -15,   -15,    38,    30,   -15,   -15,
+     -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,     0,
+      40,   -15
   };
 
   const unsigned char
@@ -961,15 +999,16 @@ namespace yy {
   {
        0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
        0,     4,     1,     0,     0,     0,     0,     0,     7,     0,
-       0,     2,     3,    20,    21,     0,     0,     0,     0,     0,
+       0,     2,     3,    24,    25,     0,     0,     0,     0,     0,
       12,    13,    15,    14,    16,    17,     0,     0,     8,     9,
-      10,    11,    19,    18,     6,     0,     0,     5
+      10,    11,    23,    18,    19,    21,    20,    22,     6,     0,
+       0,     5
   };
 
   const signed char
   calculadora_parser::yypgoto_[] =
   {
-     -15,   -15,    44,   -15,    24,   -15,   -14
+     -15,   -15,    43,   -15,   -15,   -15,   -14
   };
 
   const signed char
@@ -982,22 +1021,22 @@ namespace yy {
   calculadora_parser::yytable_[] =
   {
       26,    27,    28,    23,    12,     1,    37,    21,     3,     4,
-       5,     6,     3,     4,     5,     6,    17,    13,    24,    14,
-      15,     7,    42,     8,     9,     7,    16,     8,     9,    29,
-      19,    46,    30,    31,    32,    33,    34,    35,    30,    31,
-      32,    33,    34,    35,    20,    10,    38,    39,    40,    41,
-      44,    45,    47,    43
+       5,     6,     3,     4,     5,     6,    17,    13,    24,    42,
+      14,     7,    15,     8,     9,     7,    29,     8,     9,    43,
+      44,    45,    46,    47,    16,    50,    30,    31,    32,    33,
+      34,    35,    19,    20,    10,    38,    39,    40,    41,    48,
+      49,    51
   };
 
   const unsigned char
   calculadora_parser::yycheck_[] =
   {
       14,    15,    16,     3,     0,     4,    20,     5,     6,     7,
-       8,     9,     6,     7,     8,     9,    18,    10,    18,    10,
-      10,    19,     3,    21,    22,    19,    10,    21,    22,    12,
-      10,    45,    13,    14,    15,    16,    17,    18,    13,    14,
-      15,    16,    17,    18,    10,     1,    11,    11,    11,    11,
-      11,    20,    11,    29
+       8,     9,     6,     7,     8,     9,    18,    10,    18,     3,
+      10,    19,    10,    21,    22,    19,    12,    21,    22,    13,
+      14,    15,    16,    17,    10,    49,    13,    14,    15,    16,
+      17,    18,    10,    10,     1,    11,    11,    11,    11,    11,
+      20,    11
   };
 
   const unsigned char
@@ -1007,7 +1046,8 @@ namespace yy {
       25,    26,     0,    10,    10,    10,    10,    18,    28,    10,
       10,     5,    25,     3,    18,    29,    29,    29,    29,    12,
       13,    14,    15,    16,    17,    18,    27,    29,    11,    11,
-      11,    11,     3,    27,    11,    20,    29,    11
+      11,    11,     3,    13,    14,    15,    16,    17,    11,    20,
+      29,    11
   };
 
   const unsigned char
@@ -1015,7 +1055,7 @@ namespace yy {
   {
        0,    23,    24,    25,    25,    25,    25,    25,    26,    26,
       26,    26,    27,    27,    27,    27,    27,    27,    28,    28,
-      29,    29
+      28,    28,    28,    28,    29,    29
   };
 
   const unsigned char
@@ -1023,7 +1063,7 @@ namespace yy {
   {
        0,     2,     3,     2,     1,     6,     4,     2,     4,     4,
        4,     4,     1,     1,     1,     1,     1,     1,     3,     3,
-       1,     1
+       3,     3,     3,     3,     1,     1
   };
 
 
@@ -1043,9 +1083,9 @@ namespace yy {
   const unsigned char
   calculadora_parser::yyrline_[] =
   {
-       0,    84,    84,    86,    87,    88,    89,    90,    93,    94,
-      95,    96,    99,   100,   101,   102,   103,   104,   107,   108,
-     111,   112
+       0,    87,    87,    89,    90,    91,    92,    93,    96,    97,
+      98,    99,   102,   103,   104,   105,   106,   107,   110,   111,
+     112,   113,   114,   115,   118,   119
   };
 
   // Print the state stack on the debug stream.
@@ -1080,8 +1120,8 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:1167
 } // yy
-#line 1084 "parser.tab.cc" // lalr1.cc:1167
-#line 115 "parser.yy" // lalr1.cc:1168
+#line 1124 "parser.tab.cc" // lalr1.cc:1167
+#line 122 "parser.yy" // lalr1.cc:1168
 
 void guardarnum(std::string h,float k){
 	std::pair<std::string,float> j;
@@ -1098,6 +1138,38 @@ float buscarnum(std::string h){
 	
 	}
 	return -1;
+}
+void guardarcolor(std::string h, std::string k){
+	std::pair<std::string,std::string> j;
+	j.first=h;
+	j.second=k;
+	cl.push_back(j);
+}
+std::string buscarcolor(std::string h){
+	int l=cl.size();
+	for(int i=0;i<l;i++){
+		if(cl[i].first == h){
+
+      std::cout<<cl[i].second<<std::endl;
+      if(cl[i].second == "ROJO"){
+        dibujorojo();
+      }
+      else if(cl[i].second == "VERDE"){
+        dibujoverde();
+      }
+      else if(cl[i].second == "AMARILLO"){
+        dibujoamarillo();   
+      }
+      else if(cl[i].second == "AZUL"){
+        dibujoazul();
+      }
+      else if(cl[i].second == "BLANCO"){
+        dibujoblanco();
+      }
+      return(cl[i].second);
+		}
+	}
+  return("0");
 }
 void dibujorojo(){
 	miniwin::color(miniwin::ROJO);

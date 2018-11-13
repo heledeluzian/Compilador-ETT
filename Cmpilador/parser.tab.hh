@@ -60,8 +60,10 @@ void abajo(float dir);
 void izquierda(float dir);
 void guardarnum(std::string h,float k);
 float buscarnum(std::string h);
+void guardarcolor(std::string h, std::string k);
+std::string buscarcolor(std::string h);
 
-#line 65 "parser.tab.hh" // lalr1.cc:377
+#line 67 "parser.tab.hh" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -138,7 +140,7 @@ float buscarnum(std::string h);
 
 #line 6 "parser.yy" // lalr1.cc:377
 namespace yy {
-#line 142 "parser.tab.hh" // lalr1.cc:377
+#line 144 "parser.tab.hh" // lalr1.cc:377
 
 
 
@@ -755,7 +757,7 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 53,     ///< Last index in yytable_.
+      yylast_ = 51,     ///< Last index in yytable_.
       yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
@@ -1177,7 +1179,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:377
 } // yy
-#line 1181 "parser.tab.hh" // lalr1.cc:377
+#line 1183 "parser.tab.hh" // lalr1.cc:377
 
 
 

@@ -26,6 +26,8 @@ void abajo(float dir);
 void izquierda(float dir);
 void guardarnum(std::string h,float k);
 float buscarnum(std::string h);
+void guardarcolor(std::string h, std::string k);
+std::string buscarcolor(std::string h);
 }
 %param { calculadora_driver& driver }
 %locations
@@ -38,6 +40,7 @@ float buscarnum(std::string h);
 
 int posx,posy;
 std::vector<std::pair<std::string, float> > v;
+std::vector<std::pair<std::string, std::string> > cl;
 }
 %define api.token.prefix {TOK_}
 
@@ -101,10 +104,14 @@ VAR_C : rojo {dibujorojo();}
         | azul {dibujoazul();}
         | amarillo  {dibujoamarillo();}
         | blanco  {dibujoblanco();}
-        | id
+        | id  {buscarcolor($1);}
         ;
 
-EXP : id igual VAR_C       
+EXP : id igual rojo    {guardarcolor($1,"ROJO");}
+      | id igual verde {guardarcolor($1,"VERDE");}
+      | id igual azul  {guardarcolor($1,"AZUL");}
+      | id igual amarillo {guardarcolor($1,"AMARILLO");}
+      | id igual blanco    {guardarcolor($1,"BLANCO");}
       | id igual numero  {guardarnum($1,$3);}  
       ;
 
@@ -128,6 +135,37 @@ float buscarnum(std::string h){
 	
 	}
 	return -1;
+}
+void guardarcolor(std::string h, std::string k){
+	std::pair<std::string,std::string> j;
+	j.first=h;
+	j.second=k;
+	cl.push_back(j);
+}
+std::string buscarcolor(std::string h){
+	int l=cl.size();
+	for(int i=0;i<l;i++){
+		if(cl[i].first == h){
+      std::cout<<cl[i].second<<std::endl;
+      if(cl[i].second == "ROJO"){
+        dibujorojo();
+      }
+      else if(cl[i].second == "VERDE"){
+        dibujoverde();
+      }
+      else if(cl[i].second == "AMARILLO"){
+        dibujoamarillo();   
+      }
+      else if(cl[i].second == "AZUL"){
+        dibujoazul();
+      }
+      else if(cl[i].second == "BLANCO"){
+        dibujoblanco();
+      }
+      return(cl[i].second);
+		}
+	}
+  return("0");
 }
 void dibujorojo(){
 	miniwin::color(miniwin::ROJO);
