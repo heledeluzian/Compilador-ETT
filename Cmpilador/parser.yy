@@ -77,6 +77,7 @@ std::vector<std::pair<std::string, std::string> > cl;
 %type <float> VAR_C
 %type <float> EXP
 %type <float> VAR
+%type <float> TER
 %type <float> INST_MOVER
 
 %printer { yyoutput << $$; } <*>;
@@ -84,7 +85,9 @@ std::vector<std::pair<std::string, std::string> > cl;
 
 
 
-INST : editar INST_T termino
+INST : editar INST_T TER
+
+TER: termino {exit(0);}
 
 INST_T : INST_T INST_T
         | INST_MOVER
@@ -219,4 +222,5 @@ void posicion(float x,float y){
 void yy::calculadora_parser::error(const location_type& lugar, const std::string& lexema)
 {
   std::cout << "Error Sintactico " << lexema << std::endl;
+  
 }
