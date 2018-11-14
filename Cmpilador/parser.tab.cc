@@ -257,12 +257,11 @@ namespace yy {
       switch (that.type_get ())
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.move< float > (that.value);
         break;
 
@@ -286,12 +285,11 @@ namespace yy {
       switch (that.type_get ())
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.copy< float > (that.value);
         break;
 
@@ -337,58 +335,51 @@ namespace yy {
     {
             case 3: // numero
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 343 "parser.tab.cc" // lalr1.cc:636
+#line 341 "parser.tab.cc" // lalr1.cc:636
         break;
 
       case 18: // id
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< std::string > (); }
-#line 350 "parser.tab.cc" // lalr1.cc:636
+#line 348 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 25: // TER
+      case 25: // INST_T
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 357 "parser.tab.cc" // lalr1.cc:636
+#line 355 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 26: // INST_T
+      case 26: // INST_MOVER
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 364 "parser.tab.cc" // lalr1.cc:636
+#line 362 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 27: // INST_MOVER
+      case 27: // VAR_C
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 371 "parser.tab.cc" // lalr1.cc:636
+#line 369 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 28: // VAR_C
+      case 28: // EXP
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 378 "parser.tab.cc" // lalr1.cc:636
+#line 376 "parser.tab.cc" // lalr1.cc:636
         break;
 
-      case 29: // EXP
+      case 29: // VAR
 
-#line 83 "parser.yy" // lalr1.cc:636
+#line 82 "parser.yy" // lalr1.cc:636
         { yyoutput << yysym.value.template as< float > (); }
-#line 385 "parser.tab.cc" // lalr1.cc:636
-        break;
-
-      case 30: // VAR
-
-#line 83 "parser.yy" // lalr1.cc:636
-        { yyoutput << yysym.value.template as< float > (); }
-#line 392 "parser.tab.cc" // lalr1.cc:636
+#line 383 "parser.tab.cc" // lalr1.cc:636
         break;
 
 
@@ -589,12 +580,11 @@ namespace yy {
         switch (yyr1_[yyn])
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         yylhs.value.build< float > ();
         break;
 
@@ -619,128 +609,122 @@ namespace yy {
         {
           switch (yyn)
             {
-  case 3:
-#line 90 "parser.yy" // lalr1.cc:859
-    {exit(0);}
-#line 626 "parser.tab.cc" // lalr1.cc:859
+  case 5:
+#line 91 "parser.yy" // lalr1.cc:859
+    {posicion(yystack_[3].value.as< float > (),yystack_[1].value.as< float > ());}
+#line 616 "parser.tab.cc" // lalr1.cc:859
     break;
 
-  case 6:
-#line 94 "parser.yy" // lalr1.cc:859
-    {posicion(yystack_[3].value.as< float > (),yystack_[1].value.as< float > ());}
-#line 632 "parser.tab.cc" // lalr1.cc:859
+  case 8:
+#line 96 "parser.yy" // lalr1.cc:859
+    {abajo(yystack_[1].value.as< float > ());}
+#line 622 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 9:
-#line 99 "parser.yy" // lalr1.cc:859
-    {abajo(yystack_[1].value.as< float > ());}
-#line 638 "parser.tab.cc" // lalr1.cc:859
+#line 97 "parser.yy" // lalr1.cc:859
+    {arriba(yystack_[1].value.as< float > ());}
+#line 628 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 10:
-#line 100 "parser.yy" // lalr1.cc:859
-    {arriba(yystack_[1].value.as< float > ());}
-#line 644 "parser.tab.cc" // lalr1.cc:859
+#line 98 "parser.yy" // lalr1.cc:859
+    {izquierda(yystack_[1].value.as< float > ());}
+#line 634 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 11:
-#line 101 "parser.yy" // lalr1.cc:859
-    {izquierda(yystack_[1].value.as< float > ());}
-#line 650 "parser.tab.cc" // lalr1.cc:859
+#line 99 "parser.yy" // lalr1.cc:859
+    {derecha(yystack_[1].value.as< float > ());}
+#line 640 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 12:
 #line 102 "parser.yy" // lalr1.cc:859
-    {derecha(yystack_[1].value.as< float > ());}
-#line 656 "parser.tab.cc" // lalr1.cc:859
+    {dibujorojo();}
+#line 646 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 13:
-#line 105 "parser.yy" // lalr1.cc:859
-    {dibujorojo();}
-#line 662 "parser.tab.cc" // lalr1.cc:859
+#line 103 "parser.yy" // lalr1.cc:859
+    {dibujoverde();}
+#line 652 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 14:
-#line 106 "parser.yy" // lalr1.cc:859
-    {dibujoverde();}
-#line 668 "parser.tab.cc" // lalr1.cc:859
+#line 104 "parser.yy" // lalr1.cc:859
+    {dibujoazul();}
+#line 658 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 15:
-#line 107 "parser.yy" // lalr1.cc:859
-    {dibujoazul();}
-#line 674 "parser.tab.cc" // lalr1.cc:859
+#line 105 "parser.yy" // lalr1.cc:859
+    {dibujoamarillo();}
+#line 664 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 16:
-#line 108 "parser.yy" // lalr1.cc:859
-    {dibujoamarillo();}
-#line 680 "parser.tab.cc" // lalr1.cc:859
+#line 106 "parser.yy" // lalr1.cc:859
+    {dibujoblanco();}
+#line 670 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 17:
-#line 109 "parser.yy" // lalr1.cc:859
-    {dibujoblanco();}
-#line 686 "parser.tab.cc" // lalr1.cc:859
+#line 107 "parser.yy" // lalr1.cc:859
+    {buscarcolor(yystack_[0].value.as< std::string > ());}
+#line 676 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 18:
 #line 110 "parser.yy" // lalr1.cc:859
-    {buscarcolor(yystack_[0].value.as< std::string > ());}
-#line 692 "parser.tab.cc" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"ROJO");}
+#line 682 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 19:
-#line 113 "parser.yy" // lalr1.cc:859
-    {guardarcolor(yystack_[2].value.as< std::string > (),"ROJO");}
-#line 698 "parser.tab.cc" // lalr1.cc:859
+#line 111 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"VERDE");}
+#line 688 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 20:
-#line 114 "parser.yy" // lalr1.cc:859
-    {guardarcolor(yystack_[2].value.as< std::string > (),"VERDE");}
-#line 704 "parser.tab.cc" // lalr1.cc:859
+#line 112 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"AZUL");}
+#line 694 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 21:
-#line 115 "parser.yy" // lalr1.cc:859
-    {guardarcolor(yystack_[2].value.as< std::string > (),"AZUL");}
-#line 710 "parser.tab.cc" // lalr1.cc:859
+#line 113 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"AMARILLO");}
+#line 700 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 22:
-#line 116 "parser.yy" // lalr1.cc:859
-    {guardarcolor(yystack_[2].value.as< std::string > (),"AMARILLO");}
-#line 716 "parser.tab.cc" // lalr1.cc:859
+#line 114 "parser.yy" // lalr1.cc:859
+    {guardarcolor(yystack_[2].value.as< std::string > (),"BLANCO");}
+#line 706 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 23:
-#line 117 "parser.yy" // lalr1.cc:859
-    {guardarcolor(yystack_[2].value.as< std::string > (),"BLANCO");}
-#line 722 "parser.tab.cc" // lalr1.cc:859
+#line 115 "parser.yy" // lalr1.cc:859
+    {guardarnum(yystack_[2].value.as< std::string > (),yystack_[0].value.as< float > ());}
+#line 712 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 24:
 #line 118 "parser.yy" // lalr1.cc:859
-    {guardarnum(yystack_[2].value.as< std::string > (),yystack_[0].value.as< float > ());}
-#line 728 "parser.tab.cc" // lalr1.cc:859
+    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
+#line 718 "parser.tab.cc" // lalr1.cc:859
     break;
 
   case 25:
-#line 121 "parser.yy" // lalr1.cc:859
-    {yylhs.value.as< float > ()=yystack_[0].value.as< float > ();}
-#line 734 "parser.tab.cc" // lalr1.cc:859
-    break;
-
-  case 26:
-#line 122 "parser.yy" // lalr1.cc:859
+#line 119 "parser.yy" // lalr1.cc:859
     {yylhs.value.as< float > ()=buscarnum(yystack_[0].value.as< std::string > ());}
-#line 740 "parser.tab.cc" // lalr1.cc:859
+#line 724 "parser.tab.cc" // lalr1.cc:859
     break;
 
 
-#line 744 "parser.tab.cc" // lalr1.cc:859
+#line 728 "parser.tab.cc" // lalr1.cc:859
             default:
               break;
             }
@@ -1002,46 +986,46 @@ namespace yy {
   const signed char
   calculadora_parser::yypact_[] =
   {
-       1,     6,     4,     7,    10,    12,    25,    -2,    33,    34,
-       2,   -15,   -15,     0,     0,     0,     0,    14,   -15,    24,
-       0,   -15,   -15,     6,   -15,   -15,    23,    35,    36,    37,
-      16,   -15,   -15,   -15,   -15,   -15,   -15,    38,    30,   -15,
-     -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,
-       0,    40,   -15
+       1,     6,     4,     7,    10,    12,    24,    -2,    32,    33,
+       2,   -15,   -15,     0,     0,     0,     0,    14,   -15,    23,
+       0,   -15,     6,   -15,   -15,    34,    35,    36,    37,    16,
+     -15,   -15,   -15,   -15,   -15,   -15,    38,    30,   -15,   -15,
+     -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,   -15,     0,
+      40,   -15
   };
 
   const unsigned char
   calculadora_parser::yydefact_[] =
   {
        0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,     5,     1,     0,     0,     0,     0,     0,     8,     0,
-       0,     3,     2,     4,    25,    26,     0,     0,     0,     0,
-       0,    13,    14,    16,    15,    17,    18,     0,     0,     9,
-      10,    11,    12,    24,    19,    20,    22,    21,    23,     7,
-       0,     0,     6
+       0,     4,     1,     0,     0,     0,     0,     0,     7,     0,
+       0,     2,     3,    24,    25,     0,     0,     0,     0,     0,
+      12,    13,    15,    14,    16,    17,     0,     0,     8,     9,
+      10,    11,    23,    18,    19,    21,    20,    22,     6,     0,
+       0,     5
   };
 
   const signed char
   calculadora_parser::yypgoto_[] =
   {
-     -15,   -15,   -15,    44,   -15,   -15,   -15,   -14
+     -15,   -15,    43,   -15,   -15,   -15,   -14
   };
 
   const signed char
   calculadora_parser::yydefgoto_[] =
   {
-      -1,     2,    22,    23,    11,    37,    18,    26
+      -1,     2,    22,    11,    36,    18,    25
   };
 
   const unsigned char
   calculadora_parser::yytable_[] =
   {
-      27,    28,    29,    24,    12,     1,    38,    21,     3,     4,
-       5,     6,     3,     4,     5,     6,    17,    13,    25,    43,
-      14,     7,    15,     8,     9,     7,    30,     8,     9,    44,
-      45,    46,    47,    48,    39,    16,    51,    31,    32,    33,
-      34,    35,    36,    19,    20,    10,    40,    41,    42,    49,
-      50,    52
+      26,    27,    28,    23,    12,     1,    37,    21,     3,     4,
+       5,     6,     3,     4,     5,     6,    17,    13,    24,    42,
+      14,     7,    15,     8,     9,     7,    29,     8,     9,    43,
+      44,    45,    46,    47,    16,    50,    30,    31,    32,    33,
+      34,    35,    19,    20,    10,    38,    39,    40,    41,    48,
+      49,    51
   };
 
   const unsigned char
@@ -1050,8 +1034,8 @@ namespace yy {
       14,    15,    16,     3,     0,     4,    20,     5,     6,     7,
        8,     9,     6,     7,     8,     9,    18,    10,    18,     3,
       10,    19,    10,    21,    22,    19,    12,    21,    22,    13,
-      14,    15,    16,    17,    11,    10,    50,    13,    14,    15,
-      16,    17,    18,    10,    10,     1,    11,    11,    11,    11,
+      14,    15,    16,    17,    10,    49,    13,    14,    15,    16,
+      17,    18,    10,    10,     1,    11,    11,    11,    11,    11,
       20,    11
   };
 
@@ -1059,27 +1043,27 @@ namespace yy {
   calculadora_parser::yystos_[] =
   {
        0,     4,    24,     6,     7,     8,     9,    19,    21,    22,
-      26,    27,     0,    10,    10,    10,    10,    18,    29,    10,
-      10,     5,    25,    26,     3,    18,    30,    30,    30,    30,
-      12,    13,    14,    15,    16,    17,    18,    28,    30,    11,
-      11,    11,    11,     3,    13,    14,    15,    16,    17,    11,
-      20,    30,    11
+      25,    26,     0,    10,    10,    10,    10,    18,    28,    10,
+      10,     5,    25,     3,    18,    29,    29,    29,    29,    12,
+      13,    14,    15,    16,    17,    18,    27,    29,    11,    11,
+      11,    11,     3,    13,    14,    15,    16,    17,    11,    20,
+      29,    11
   };
 
   const unsigned char
   calculadora_parser::yyr1_[] =
   {
-       0,    23,    24,    25,    26,    26,    26,    26,    26,    27,
-      27,    27,    27,    28,    28,    28,    28,    28,    28,    29,
-      29,    29,    29,    29,    29,    30,    30
+       0,    23,    24,    25,    25,    25,    25,    25,    26,    26,
+      26,    26,    27,    27,    27,    27,    27,    27,    28,    28,
+      28,    28,    28,    28,    29,    29
   };
 
   const unsigned char
   calculadora_parser::yyr2_[] =
   {
-       0,     2,     3,     1,     2,     1,     6,     4,     2,     4,
-       4,     4,     4,     1,     1,     1,     1,     1,     1,     3,
-       3,     3,     3,     3,     3,     1,     1
+       0,     2,     3,     2,     1,     6,     4,     2,     4,     4,
+       4,     4,     1,     1,     1,     1,     1,     1,     3,     3,
+       3,     3,     3,     3,     1,     1
   };
 
 
@@ -1092,16 +1076,16 @@ namespace yy {
   "\"eof\"", "error", "$undefined", "numero", "editar", "termino", "aba",
   "arr", "izq", "der", "parabier", "paracer", "igual", "rojo", "verde",
   "amarillo", "azul", "blanco", "id", "davalor", "coma", "color", "pos",
-  "$accept", "INST", "TER", "INST_T", "INST_MOVER", "VAR_C", "EXP", "VAR", YY_NULLPTR
+  "$accept", "INST", "INST_T", "INST_MOVER", "VAR_C", "EXP", "VAR", YY_NULLPTR
   };
 
 #if YYDEBUG
   const unsigned char
   calculadora_parser::yyrline_[] =
   {
-       0,    88,    88,    90,    92,    93,    94,    95,    96,    99,
-     100,   101,   102,   105,   106,   107,   108,   109,   110,   113,
-     114,   115,   116,   117,   118,   121,   122
+       0,    87,    87,    89,    90,    91,    92,    93,    96,    97,
+      98,    99,   102,   103,   104,   105,   106,   107,   110,   111,
+     112,   113,   114,   115,   118,   119
   };
 
   // Print the state stack on the debug stream.
@@ -1136,8 +1120,8 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:1167
 } // yy
-#line 1140 "parser.tab.cc" // lalr1.cc:1167
-#line 125 "parser.yy" // lalr1.cc:1168
+#line 1124 "parser.tab.cc" // lalr1.cc:1167
+#line 122 "parser.yy" // lalr1.cc:1168
 
 void guardarnum(std::string h,float k){
 	std::pair<std::string,float> j;
@@ -1165,6 +1149,7 @@ std::string buscarcolor(std::string h){
 	int l=cl.size();
 	for(int i=0;i<l;i++){
 		if(cl[i].first == h){
+
       std::cout<<cl[i].second<<std::endl;
       if(cl[i].second == "ROJO"){
         dibujorojo();
@@ -1238,5 +1223,4 @@ void posicion(float x,float y){
 void yy::calculadora_parser::error(const location_type& lugar, const std::string& lexema)
 {
   std::cout << "Error Sintactico " << lexema << std::endl;
-  exit(0);
 }

@@ -308,7 +308,6 @@ namespace yy {
     union union_type
     {
       // numero
-      // TER
       // INST_T
       // INST_MOVER
       // VAR_C
@@ -759,7 +758,7 @@ namespace yy {
     {
       yyeof_ = 0,
       yylast_ = 51,     ///< Last index in yytable_.
-      yynnts_ = 8,  ///< Number of nonterminal symbols.
+      yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
@@ -843,12 +842,11 @@ namespace yy {
       switch (other.type_get ())
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.copy< float > (other.value);
         break;
 
@@ -874,12 +872,11 @@ namespace yy {
       switch (this->type_get ())
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.copy< float > (v);
         break;
 
@@ -943,12 +940,11 @@ namespace yy {
     switch (yytype)
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.template destroy< float > ();
         break;
 
@@ -980,12 +976,11 @@ namespace yy {
       switch (this->type_get ())
     {
       case 3: // numero
-      case 25: // TER
-      case 26: // INST_T
-      case 27: // INST_MOVER
-      case 28: // VAR_C
-      case 29: // EXP
-      case 30: // VAR
+      case 25: // INST_T
+      case 26: // INST_MOVER
+      case 27: // VAR_C
+      case 28: // EXP
+      case 29: // VAR
         value.move< float > (s.value);
         break;
 
@@ -1184,7 +1179,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:377
 } // yy
-#line 1188 "parser.tab.hh" // lalr1.cc:377
+#line 1183 "parser.tab.hh" // lalr1.cc:377
 
 
 
